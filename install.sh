@@ -11,7 +11,7 @@ install() {
 
 sudo apt-get update 1>update.stdout.log 2>update.stderr.log
 
-install golang-1.7
+install golang
 install git
 install tmux
 
