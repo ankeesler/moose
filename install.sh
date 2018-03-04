@@ -25,4 +25,15 @@ export PATH="\$PATH:\$GOPATH/bin"
 export PATH="\$PATH:/usr/lib/go-1.7/bin"
 EOM
 
+cat >> ~/.tmux.conf <<- EOM
+
+# From install.sh...
+# Change my special key to match what we use at Pivotal
+set-option -g prefix C-a
+unbind-key C-b
+bind-key C-a send-prefix
+# Make sure vim is used in copy-mode...sad :(
+set-window-option -g mode-keys vi
+EOM
+
 cd ..
